@@ -23,6 +23,21 @@ export interface IWideTableData {
   role: string;
 }
 
+export interface Video {
+  videoId: number;
+  videoName: string;
+  videoLength: number;
+  videoDescription: string;
+  videoUrl: string;
+
+}
+
+export interface GuestData {
+  guestId: number;
+  guestNickname: string;
+  guestEmail: string;
+}
+
 export function useTableData() {
   const simpleTableData = ref<ISimpleTableData[]>([
     { city: 'New York', totalOrders: '200,120' },
@@ -81,9 +96,25 @@ export function useTableData() {
     }))
   );
 
+const video = ref<Video[]>( [{
+  videoId: 0,
+  videoName: 'Rick Astley - Never Gonna Give You Up',
+  videoLength: 224,
+  videoDescription: 'string',
+  videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+}])
+
+const guestData = ref<GuestData[]>( [{
+  guestId: 0,
+  guestNickname: 'Eelboi',
+  guestEmail: 'slurp@eelboi.com'
+}])
+
   return {
     simpleTableData,
     paginatedTableData,
     wideTableData,
+    guestData,
+    video,
   };
 }

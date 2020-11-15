@@ -8,6 +8,9 @@ import Login from "./views/Login.vue";
 import Modal from "./views/Modal.vue";
 import Card from "./views/Card.vue";
 import Blank from "./views/Blank.vue";
+import VideoList from "./views/VideoList.vue";
+import VideoManager from "./views/VideoManager.vue";
+import ChatMenu from "./views/ChatMenu.vue";
 import NotFound from "./views/NotFound.vue";
 
 const routes: RouteRecordRaw[] = [
@@ -25,7 +28,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/forms",
     name: "Forms",
-    component: Forms,
+    component: Forms, 
   },
   {
     path: "/cards",
@@ -51,6 +54,21 @@ const routes: RouteRecordRaw[] = [
     path: "/blank",
     name: "Blank",
     component: Blank,
+  },
+  {
+    path: "/videolist",
+    name: "VideoList",
+    component: VideoList,
+  },
+  {
+    path: "/videomanager",
+    name: "VideoManager",
+    component: VideoManager,
+  },
+  {
+    path: "/chatmenu",
+    name: "ChatMenu",
+    component: ChatMenu,
   },
 ];
 
