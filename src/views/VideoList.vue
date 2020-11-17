@@ -58,7 +58,7 @@
               {{ i.videoLength }}
             </td>
             <td class="py-4 px-6 border-b text-gray-500">
-              {{ i.videoBroadcastTime}}, {{ i.videoBroadcastDate }}  
+              {{ i.videoBroadcastTime }}, {{ i.videoBroadcastDate }}
             </td>
             <td>
               <div>
@@ -253,25 +253,60 @@
                       <p class="text-2xl font-bold">Video Embed Code</p>
                     </div>
                     <!--Body-->
-                    <div></div>
-
-                    <div class="mt-5 text-black text-sm bg-gray-500 rounded">
-                      <v-text-field height="300">Embed code</v-text-field>
+                    <div>
+                      <div>
+                        <div
+                          class="flex rounded-md bg-white py-4 px-2 overflow-x-auto"
+                        >
+                          <label>
+                            <input
+                              type="radio"
+                              :class="`form-radio h-5 w-5 text-${c}-600`"
+                              name="radio"
+                            /><span class="ml-2 mr-2 text-gray-700"
+                              >Just video</span
+                            >
+                          </label>
+                          <label>
+                            <input
+                              type="radio"
+                              :class="`form-radio h-5 w-5 text-${c}-600`"
+                              name="radio"
+                            /><span class="ml-2 text-gray-700"
+                              >Video with live chat</span
+                            >
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                    <!--Footer-->
-                    <div class="flex justify-end pt-3">
-                      <b-button
-                        @click="openGen = false"
-                        class="px-6 py-3 bg-indigo-600 rounded-md text-white font-medium tracking-wide hover:bg-indigo-500"
+
+                    <div>
+                      <div
+                        class="px-5 py-5 text-black text-sm bg-gray-500 rounded"
                       >
-                        Copy Code
-                      </b-button>
-                      <button
-                        @click="openGen = false"
-                        class="px-6 py-3 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2"
+                        <v-text-field height="300">Embed code</v-text-field>
+                      </div>
+                      
+                      <div
+                        class="px-5 py-5 text-black text-sm bg-gray-500 rounded"
                       >
-                        Close
-                      </button>
+                        <v-text-field height="300">Embed code</v-text-field>
+                      </div>
+                      <!--Footer-->
+                      <div class="flex justify-end pt-3">
+                        <b-button
+                          @click="openGen = false"
+                          class="px-6 py-3 bg-indigo-600 rounded-md text-white font-medium tracking-wide hover:bg-indigo-500"
+                        >
+                          Copy Code
+                        </b-button>
+                        <button
+                          @click="openGen = false"
+                          class="px-6 py-3 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2"
+                        >
+                          Close
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -306,5 +341,4 @@ export default defineComponent({
 </script>
 
 <style >
-
 </style>

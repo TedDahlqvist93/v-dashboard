@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="mt-4">
-      <div class="mt-6">
+      <div>
         <div class="bg-white shadow rounded-md overflow-hidden my-6">
           <table class="text-left w-full border-collapse">
-            <thead class="border-b">
+            <thead class="border-b" >
               <tr>
                 <th
                   class="py-3 px-5 bg-indigo-800 font-medium uppercase text-sm text-gray-100"
@@ -13,24 +13,30 @@
                 </th>
                 <th
                   class="py-3 px-5 bg-indigo-800 font-medium uppercase text-sm text-gray-100"
-                >
-                  Email
-                </th>
+                ></th>
+                <th
+                  class="py-3 px-5 bg-indigo-800 font-medium uppercase text-sm text-gray-100"
+                ></th>
               </tr>
             </thead>
             <tbody>
               <tr
                 v-for="(i, index) in guestData"
                 :key="index"
-                class="hover:bg-gray-200"
+                class="hover:bg-gray-200" 
               >
                 <td class="py-4 px-6 border-b text-lg">
                   {{ i.guestNickname }}
                 </td>
-                <td class="py-4 px-6 border-b text-lg">
-                  {{ i.guestEmail }}
+
+                <td>
+                  <button
+                    @click="openEdit = true"
+                    class="mt-1 mb-1 px-7 py-2 bg-indigo-500 rounded-md text-white font-medium tracking-wide hover:bg-indigo-500"
+                  >
+                    Open chat
+                  </button>
                 </td>
-                
               </tr>
             </tbody>
           </table>
